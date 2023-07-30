@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsIntro</title>
+    <%# <%= favicon_link_tag asset_path('#') %>
+    <title>Project ReMAKE</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= request.original_url %>">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +15,32 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <a href="#" class="navbar-project">Project ReMAKE</a>
+      </div>
+      <div class="navbar-links">
+        <a href="#" class="navbar-link">Entrepenurs</a>
+        <a href="#" class="navbar-link">Educational</a>
+      </div>
+      <div class="navbar-dropdown">
+          <button class="dropdown-toggle">Menu</button>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">Testimonial</a>
+          <a href="#" class="dropdown-item">About Us</a>
+          <a href="#" class="dropdown-item">Login</a>
+        </div>
+    </nav>
+
     <%= yield %>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
   </body>
 </html>
