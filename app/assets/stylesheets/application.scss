@@ -1,7 +1,7 @@
 @import "bootstrap/scss/bootstrap";
 
 body {
-  background-image: url("https://res.cloudinary.com/difj9msh3/image/upload/c_scale,w_1539,z_1/v1690751835/Screenshot_2023-07-21_at_20.49.45_cyicem_eblwnj.jpg");
+  background-image: url("https://res.cloudinary.com/difj9msh3/image/upload/v1691094570/remake1_hguhjv.jpg");
   margin-top: 12px;
   margin-left: 16px;
   margin-right: 16px;
@@ -9,6 +9,8 @@ body {
   width: 100%;
   display: block;
   box-sizing: border-box;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-size: cover; /* Adjust the background size to cover the whole screen */
 }
 
 .navbar {
@@ -20,7 +22,7 @@ body {
   width: 100%;
   margin-bottom: 12px;
   border-radius: 5px;
-  z-index: 1000;
+  z-index: 1;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
@@ -84,6 +86,86 @@ body {
 textarea.form-control {
   resize: vertical;
 }
+
+/* Reset CSS */
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+// body {
+//   font-family: Arial, sans-serif;
+//   background-color: #f5f5f5;
+// }
+
+.body-container {
+  display: flex;
+  justify-content: center; /* Center the elements horizontally */
+  align-items: center; /* Center the elements vertically */
+  flex-wrap: wrap; /* Allow containers to wrap to the next line */
+  margin: 80px 128px 0; /* Added top margin to create space under the navbar */
+}
+
+.container {
+  width: 3600px;
+  padding: 124px;
+  display: flex;
+  flex-direction: row; /* Set the containers to display horizontally */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px; /* Separation between containers */
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+
+  .image {
+    width: 1800px; /* Adjust the image width as needed */
+    max-height: 100%; /* Set the image height to stretch to the container height */
+    flex: 1; /* Allow the image to occupy 1/3 of the container */
+    overflow: hidden;
+    background-color: #ccc; /* Background color for the image area */
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .text-box {
+    flex: 2; /* Allow the text box to occupy 2/3 of the container */
+    padding: 20px;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+      line-height: 1.5;
+    }
+  }
+
+  .primary-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
 
 .footer {
   background-color: rgb(255, 255, 255);
